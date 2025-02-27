@@ -340,7 +340,7 @@ Below is a dedicated section on how to avoid and protect against SQL injection i
 
 ## 7 Protecting Against SQL Injection
 
-### a. Use Parameterized Queries & Query Builders**
+### a. Use Parameterized Queries & Query Builders
 
 When you need to execute custom SQL queries, never concatenate user input into the query string. Instead, use TypeORM’s query builder or parameterized queries that automatically escape inputs.
 
@@ -365,7 +365,7 @@ const user = await dataSource
   .getOne();
 ```
 
-### b. Rely on Repository Methods**
+### b. Rely on Repository Methods
 
 TypeORM’s repository methods (e.g., `find`, `findOne`, and `save`) automatically use parameter binding, so avoid raw SQL queries when possible.
 
@@ -376,7 +376,7 @@ TypeORM’s repository methods (e.g., `find`, `findOne`, and `save`) automatical
 const user = await userRepository.findOne({ where: { username: userInput } });
 ```
 
-### c. Avoid Dynamic SQL Construction**
+### c. Avoid Dynamic SQL Construction
 
 If you must build SQL dynamically, validate and sanitize inputs rigorously before incorporating them into queries. However, the preferred approach is to use parameters or query builders.
 
@@ -401,7 +401,7 @@ const users = await dataSource
   .getMany();
 ```
 
-### d. Use ORM-Provided Methods for Data Manipulation**
+### d. Use ORM-Provided Methods for Data Manipulation
 
 When working with inserts, updates, or deletes, always use methods provided by TypeORM (e.g., `create`, `save`, `update`, and `delete`). These methods safely handle the underlying SQL.
 
