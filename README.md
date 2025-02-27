@@ -856,7 +856,31 @@ export class CreateUserTable1661234567890 implements MigrationInterface {
 
 ---
 
-## 20. Other Good Practices
+## 20. Follow Following naming conventions
+
+| **What**               | **How**                                   | **Good Example**             | **Bad Example**                 |
+|------------------------|-------------------------------------------|------------------------------|---------------------------------|
+| **Controller**         | Singular name                             | `UserController`             | `UsersController`               |
+| **Route**              | Plural in URL                             | `/users/1`                   | `/user/1`                       |
+| **Route Name**         | Snake_case with dot notation              | `users.show_active`          | `users.show-active` or `show-active-users` |
+| **Service**            | Singular name                             | `UserService`                | `UsersService`                  |
+| **Module**             | Singular name                             | `UserModule`                 | `UsersModule`                   |
+| **DTO**                | PascalCase with 'Dto' suffix              | `CreateUserDto`              | `create_user_dto`               |
+| **Entity/Model**       | Singular name                             | `User`                       | `Users`                         |
+| **Enum**               | Singular name                             | `UserRole`                   | `UserRoles`                     |
+| **Repository**         | Singular name                             | `UserRepository`             | `UsersRepository`               |
+| **Interceptor**        | Singular name                             | `LoggingInterceptor`         | `LoggingInterceptors`           |
+| **Guard**              | Singular name                             | `AuthGuard`                  | `AuthGuards`                    |
+| **Pipe**               | Singular name                             | `ValidationPipe`             | `ValidationPipes`               |
+| **Exception Filter**   | Singular name                             | `HttpExceptionFilter`        | `HttpExceptionFilters`          |
+| **Middleware**         | Singular name                             | `LoggerMiddleware`           | `LoggerMiddlewares`             |
+| **Custom Decorator**   | camelCase for function names              | `@CurrentUser()`             | `@current_user()`               |
+| **Test File**          | Use `.spec.ts` suffix                     | `user.controller.spec.ts`    | `UserController.test.ts`        |
+| **File Naming**        | kebab-case (all lowercase with hyphens)   | `user.controller.ts`         | `UserController.ts`             |
+
+
+---
+## 21. Other Good Practices
 
 - **Comment Wisely:** Use descriptive names for methods and variables to reduce the need for comments.
 - **Avoid Inline HTML/JS in Server Code:** Keep front-end concerns separate from backend logic.
