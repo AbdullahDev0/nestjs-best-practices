@@ -1,5 +1,5 @@
 # NestJS: Best Practices & Robust Backend Architecture Guide
-Below is an extensive list of best practices for building NestJS applications. This guide covers everything from applying the single responsibility principle to using DTOs and TypeORM with transactions and migrations. Each section explains the “why” and “how,” and includes code examples that follow NestJS conventions.
+Below is an extensive list of best practices for building NestJS applications. This guide covers everything from applying the single responsibility principle to using DTOs and TypeORM with transactions and migrations.
 
 I have also provided a sample application flow on Medium that further explains how to build a robust backend using NestJS, TypeORM, and microservices. Check it out here:  
 [Building a Robust Backend: A Comprehensive Guide Using NestJS, TypeORM, and Microservices](https://medium.com/@abdullahirfan99_80517/building-a-robust-backend-a-comprehensive-guide-using-nestjs-typeorm-and-microservices-f291295cb187)
